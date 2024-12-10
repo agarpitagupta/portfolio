@@ -1,0 +1,164 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  height: 45px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ff7e5f;
+  transition: width 0.3s;
+  margin: auto;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Section Styles */
+.section {
+  padding: 80px 15px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  text-align: center;
+}
+
+.home h1 span {
+  color: #ff7e5f;
+}
+
+.home .cta-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #ff7e5f;
+  color: white;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+
+.home .cta-btn:hover {
+  background: #feb47b;
+}
+
+.about {
+  background: #f9f9f9;
+  color: #333;
+  text-align: center;
+  padding: 40px 15px;
+}
+
+.projects {
+  background: #fff;
+  padding: 40px 15px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.project-item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 18px;
+  width: 270px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-item:hover {
+  transform: scale(1.03);
+}
+
+.contact {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  padding: 40px 15px;
+}
+
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+
+/* Miscellaneous Styles */
+.content {
+  gap: 10px;
+}
+
+/* Additional improvements */
+button, .cta-btn {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover, .cta-btn:hover {
+  transform: translateY(-3px);
+}
